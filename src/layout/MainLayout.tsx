@@ -5,11 +5,13 @@ import { Outlet } from "react-router";
 
 const MainLayout = () => {
     return (
-    <div>
+    <div className="grid grid-rows-[auto_1fr_auto] min-h-screen">
       <Navbar />
-      <div>
+     
         <Outlet />
-      </div>
+
+        
+     
     </div>
     );
 };

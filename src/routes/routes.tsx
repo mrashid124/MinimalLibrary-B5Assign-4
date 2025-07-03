@@ -12,14 +12,8 @@ export const router = createBrowserRouter([
     children: [
       { index: true, Component: AllBooks },
       { path: "/books", Component: AllBooks },
-      {
-        path: "addBook",
-        Component: AddBook,
-      },
-      {
-        path: "borrow",
-        Component: Borrow,
-      },
+      { path: "/addBook", Component: AddBook },
+      { path: "/borrow",  Component: Borrow  },
     ],
   },
 ]);
