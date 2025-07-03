@@ -1,14 +1,25 @@
-import HomeLayout from "@/layouts/HomeLayout";
-import AllBook from "@/pages/AllBook/AllBook";
+import MainLayout from "@/layout/MainLayout";
+import AddBook from "@/pages/AddBook";
+
+import AllBooks from "@/pages/AllBooks";
+import Borrow from "@/pages/Borrow";
 import { createBrowserRouter } from "react-router";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    Component: HomeLayout,
+    Component: MainLayout,
     children: [
-      { index: true, Component: AllBook },
-      { path: "/books", Component: AllBook },
+      { index: true, Component: AllBooks },
+      { path: "/books", Component: AllBooks },
+      {
+        path: "addBook",
+        Component: AddBook,
+      },
+      {
+        path: "borrow",
+        Component: Borrow,
+      },
     ],
   },
 ]);
